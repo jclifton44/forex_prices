@@ -1,0 +1,32 @@
+public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		//This is subject to change.
+		int positive = 0;
+		int negative = 0; 
+		if(((WeeklyRanking)o).secondAverage > secondAverage) {
+			positive += 19;
+		} else {
+			negative += 19;
+		}
+		if(((WeeklyRanking)o).firstSlope > firstSlope) {
+			positive += 15;
+		} else {
+			negative += 15;
+		}
+		if(((WeeklyRanking)o).firstAverage > firstAverage) {
+			positive += 7;
+		} else {
+			negative += 7;
+		}
+		if(((WeeklyRanking)o).slope > slope) {
+			positive += 6;
+		} else {
+			negative += 6;
+
+		}
+		if(positive > negative) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}

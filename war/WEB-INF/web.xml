@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.ValueTransformer.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/valuetransformer/greet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>parse</servlet-name>
+    <servlet-class>ValueTransformerTest</servlet-class>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>transform2</servlet-name>
+    <url-pattern>/transform2</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>transform2</servlet-name>
+    <servlet-class>Transform2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet>
+    <servlet-name>delete</servlet-name>
+    <servlet-class>DeleteAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>transform</servlet-name>
+    <url-pattern>/transform</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet>
+    <servlet-name>transform</servlet-name>
+    <servlet-class>Transform</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>parse</servlet-name>
+    <url-pattern>/parse</url-pattern>
+  </servlet-mapping>
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>ValueTransformer.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
